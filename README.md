@@ -13,10 +13,19 @@ You will need to install required dependencies
 ## Description
 
 This app will demo
-  - open website [https://todomvc.com/examples/react/](https://todomvc.com/examples/react/#)
-  - create 4 new `TodoList Item`
-  - complete `TodoList Item`
-  - filter with Completed List
+
+  - Open website [https://todomvc.com/examples/react/](https://todomvc.com/examples/react/#)
+  - Create 4 new 'TodoList Items'
+  - Verify if items have been saved
+  - Validate 'Todos Item count'
+  - Update ‘Todos Item'
+  - Complete an item from 'Todos Items'
+  - Verify if the completed item is in the completed ‘TodoList Items`
+  - Filter with completed 'TodoList Items'
+  - Clear the completed 'TodoList Item’
+  - Filter active 'TodoList Items'
+  - View remaining 'TodoList Items'
+  - Delete an item and verify 'TodoList count'
 
 ## How to execute
 

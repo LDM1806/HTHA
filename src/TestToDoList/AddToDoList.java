@@ -21,20 +21,51 @@ private static WebDriver driver = null;
 	{
 		driver = new ChromeDriver();
 		PageElements todos = new PageElements(driver);
+		
+		//Navigate to the website
 	
 		driver.get("https://todomvc.com/examples/react/#");
-	   	
-		todos.ToDoItem1("Download");		
+		Thread.sleep(1000);
+		
+	   	//Add ToDos and verify if items have been saved
+		todos.ToDoItem1("Download");				
 		todos.ToDoItem2("Install");
 		todos.ToDoItem3("Run");
 		todos.ToDoItem4("Test");
-		Thread.sleep(2000);
-		todos.FilterComplete();	
-		Thread.sleep(2000);
-		todos.FilterAllItems();
-		Thread.sleep(2000);
+		
+		//Validate todos count
+		todos.ToDoCount();
+		
+		// Wait for items to be listed
+		Thread.sleep(1000);
+		
+		//Update a todos item
+		todos.UpdateTodoItem();
+		Thread.sleep(1000);
+				
+		//Complete an item
 		todos.CompleteAToDoItem();
-		todos.FilterComplete();
+		
+		//Verify if the completed item is in the Completed list
+		todos.FilterCompleted();	
+		Thread.sleep(1000);
+		
+		//Clear the completed item
+		todos.ClearCompletedItems();
+		Thread.sleep(1000);
+		
+		//Filter Active todos
+		todos.Activetodos();
+		Thread.sleep(1000);
+		
+		//View left todo items
+		todos.FilterAllItems();
+		Thread.sleep(1000);
+		
+		//Delete an item and verify todos left count
+		todos.DeleteToDoItem();
+	
+		//driver.quit();
 		
 	}
 
